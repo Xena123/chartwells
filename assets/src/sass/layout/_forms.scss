@@ -1,0 +1,57 @@
+/*------------------------------------|
+|	Forms                               |
+|------------------------------------*/
+
+
+.l-form {
+  position: relative;
+  input[type=text],
+  input[type=email],
+  textarea {
+    width: 100%;
+    background-color: #f1d133;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    &::placeholder {
+      color: #000;
+      font-family: $font-beta;
+      @include font-size(16, 16, -5);
+      @include mediaMin($bp-tablet-s) {
+        @include font-size(21, 23, -5);
+      }
+    }
+  }
+  textarea {
+    height: 230px;
+  }
+
+}
+
+.l-form-submit {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: auto;
+}
+
+.form-field--half {
+  display: flex;
+  > div {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+
+.form--accent {
+  background-color: $colour-accent;
+}
+
+.l-form-field {
+
+}

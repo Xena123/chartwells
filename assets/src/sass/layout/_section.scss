@@ -1,0 +1,41 @@
+/*------------------------------------|
+|	Section                             |
+|------------------------------------*/
+
+.section__bg {
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.section--arrow {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  .arrow {
+    background: transparent url('../img/icons/arw-wht.png') no-repeat center center;
+    height: 50px;
+    width: 50px;
+    color: #000;
+  }
+}
+
+.l-section--sidebar {
+  @include mediaMin($bp-tablet-m) {
+    margin-top: 25px;
+    > aside, div {
+      display: inline-block;
+    }
+  }
+}
+
+.l-section--aside {
+  @include mediaMin($bp-tablet-m) {
+    width: 70%;
+  }
+}

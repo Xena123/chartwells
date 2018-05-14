@@ -1,0 +1,12 @@
+/* Glow */
+@mixin glow {
+	@include hvr-setup;
+	@include prefixed(transition-duration, $mediumDuration);
+	@include prefixed(transition-property, box-shadow);
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 0 8px $shadowColor;
+	}
+}

@@ -1,0 +1,16 @@
+.article__content {
+  img {
+    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    @include mediaMin($bp-tablet-s) {
+      margin-bottom: 30px;
+    }
+  }
+  p {
+    margin-bottom: 15px;
+    @include mediaMin($bp-tablet-s) {
+      margin-bottom: 30px;
+    }
+  }
+}

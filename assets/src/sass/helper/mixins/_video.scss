@@ -1,0 +1,37 @@
+//-----------------------------------
+//	Video Mixins
+//-----------------------------------
+
+
+
+//------ Youtube Video ------//
+// Expands video to full width & proportional height
+// Put on Container:
+@mixin youtube-parent($aspect-ratio: 16-9) {
+  @if ($aspect-ratio == "16-9") {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 56.25%; /* 16:9 */
+  } @else if ($aspect-ratio == "4-3") {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 75%; /* 4:3 */
+  }
+}
+// Put on Video Element:
+@mixin youtube-child() {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 101%;
+  height: 101%;
+}

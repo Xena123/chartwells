@@ -1,0 +1,189 @@
+.row--offset {
+  @include mediaMin($bp-tablet-l) {
+    margin-top: 15%;
+  }
+  @include mediaMin($bp-laptop-s) {
+    margin-top: 15%;
+  }
+  @include mediaMin($bp-laptop) {
+    margin-top: 200px;
+  }
+  @include mediaMax($bp-tablet-l) {
+    padding-top: 45px;
+  }
+}
+
+.row--minus {
+  margin-top: -60px;
+}
+
+.row--lg-minus {
+  margin-top: -150px;
+}
+
+.row--sml-offset {
+  margin-top: 25px;
+  @include mediaMin($bp-tablet-l) {
+    margin-top: 50px;
+  }
+}
+
+.row--fixed-offset {
+  padding-top: 10%;
+  @include mediaMin($bp-tablet-m) {
+    padding-top: 15%;
+  }
+  @include mediaMin($bp-laptop) {
+    //padding-top: 125px;
+  }
+}
+
+.row--btm-offset {
+  padding-bottom: 50px;
+  @include mediaMin($bp-tablet-l) {
+    padding-bottom: 100px;
+  }
+}
+
+
+.row--btm-offset-sml {
+  padding-bottom: 60px;
+}
+
+.row--header-offset {
+  margin-top: 60px;
+  @include mediaMin($bp-nav) {
+    margin-top: 85px;
+  }
+}
+
+.row--top-mob {
+  @include mediaMax($bp-tablet-l) {
+    padding-top: 60px;
+  }
+}
+
+.row--push-footer {
+  margin-top: 60px;
+  @include mediaMin($bp-tablet-s) {
+    height: calc(100vh - 88px);
+    margin-top: 0;
+  }
+}
+
+
+.row--grid {
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 10px 15px;
+  border-radius: 5px;
+  @include mediaMax($bp-tablet-l) {
+    width: 100%;
+    overflow-x: scroll;
+    //white-space: nowrap;
+  }
+}
+
+.row--modal {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mediaMax($bp-tablet-l) {
+    max-width: 100vw;
+    height: 90%;
+  }
+}
+
+.row--center {
+  @include mediaMax($bp-tablet-xl) {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include mediaMax($bp-tablet-l) {
+    height: 80%;
+  }
+}
+
+.row--search {
+  padding: 30px 15px;
+  background-color: #33aa66;
+  border-radius: 5px;
+  > div {
+    margin-bottom: 10px;
+    @include mediaMin($bp-tablet-s) {
+      width: 25%;
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+  }
+  button {
+    width: 100%;
+    @include mediaMin($bp-tablet-s) {
+      width: 37%;
+    }
+    @include mediaMin($bp-tablet-m) {
+      width: 22%;
+    }
+  }
+  input, select {
+    background-color: #309a5d;
+    color: #fff;
+    @include font-size(20,20,-5);
+    @include mediaMin($bp-tablet-l) {
+      @include font-size(25,23,-5);
+    }
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  @include mediaMin($bp-tablet-s) {
+    display: flex;
+  }
+
+}
+
+.row--job-listing {
+  .job-type {
+    background-color: #e8e8e8;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    h3 {
+      margin-bottom: 15px;
+      @include font-size(25,23,-5);
+    }
+  }
+  select {
+    background-color: #d2d2d2;
+    height: 50px;
+    @include font-size(25,23,-5);
+  }
+  .job-listing {
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+  .job-role,
+  .job-loc {
+    @include font-size(19,19,12.5);
+  }
+  .job-loc {
+    color: #a9a9a9;
+  }
+  .job-pagination {
+    margin-top: 50px;
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        font-weight: $bold;
+        &.active {
+          color: #a9a9a9;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

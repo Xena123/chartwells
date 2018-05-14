@@ -1,0 +1,13 @@
+/*------------------------------------|
+|	Aside                               |
+|------------------------------------*/
+
+.l-aside {
+  margin: 20px 0;
+  @include mediaMin($bp-tablet-m) {
+    width: 25%;
+    padding-right: 4%;
+    vertical-align: top;
+    margin: 0;
+  }
+}

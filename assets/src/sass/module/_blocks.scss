@@ -1,0 +1,76 @@
+.block {
+  padding: 10px;
+  @include mediaMin($bp-tablet-s) {
+    padding: 35px;
+  }
+}
+
+.block--fullheight {
+  height: 100%;
+}
+
+.block--testimonial {
+  margin: 20px 0;
+}
+
+.block__content-partial {
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 45%;
+  transition: top 0.6s ease-in-out;
+}
+
+.block__abs {
+  @include mediaMax($bp-tablet-l) {
+    position: absolute;
+  }
+}
+
+.block__background {
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.block--img {
+  height: 300px;
+}
+
+//Block heights 
+.block--sml {
+  height: 115px;
+}
+
+.block--sixth {
+  height: 150px;
+}
+
+.block--team {
+  height: 250px;
+  .block__partial {
+    height: 175px;
+  }
+  .block__content-partial {
+    top: 70%;
+    text-align: center;
+  }
+}
+
+.block--our-story {
+  height: 270px;
+}
+
+.block--tweet {
+  height: 400px;
+}
+
+.block--single {
+  height: 150px;
+  width: 100%;
+}

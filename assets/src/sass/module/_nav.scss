@@ -1,0 +1,244 @@
+/*------------------------------------|
+|	Nav Links                           |
+|------------------------------------*/
+
+
+.nav__container {
+  @include mediaMax($bp-nav) {
+    display: none;
+  }
+}
+
+.nav {
+  > li {
+    display: inline-block;
+    line-height: 45px;
+    position: relative;
+    .sub-menu {
+      display: none;
+      position: absolute;
+      background-color: #2b2b2b;
+      border-radius: 5px;
+      min-width: 175px;
+      left: -2px;
+      padding: 10px 0;
+      > li {
+        display: block;
+        line-height: 30px;
+        margin: 0 5px;
+        a {
+          color: $colour-accent;
+        }
+      }
+    }
+    &:hover > ul {
+      display: block;
+    }
+  }
+  a {
+    @include font-size(14,26,15);
+  }
+}
+
+.nav--header {
+  li {
+    border-radius: 100px;
+    margin: 0 7.5px;
+  }
+  a {
+    padding: 25px 4px;
+    border-radius: 30px;
+  }
+  @include mediaMin($bp-tablet-xl) {
+    li {
+      margin: 0 10px;
+    }
+    a {
+      padding: 7.5px 10px;
+    }
+  }
+  @include mediaMax($bp-nav) {
+    position: relative;
+    left: 100%;
+    transition: left .6s ease-in;
+    transition-delay: 0s;
+    padding: 20px;
+    a {
+      color: #fff;
+      @include font-size(18,18);
+      padding: 7.5px 13px;
+    }
+    li {
+      display: block;
+      line-height: 55px;
+    }
+  }
+}
+
+.nav--footer {
+  li {
+    margin: 0 13.5px;
+  }
+  a {
+    line-height: 50px;
+  }
+}
+
+.nav__contact {
+  z-index: 999;
+  background-color: $colour-accent;
+  position: absolute;
+  right: 0;
+  @include mediaMin($bp-nav) {
+    right: 5%;
+    top: -10px;
+    bottom: -10px;
+  }
+
+}
+
+.nav--button {
+  height: 88px;
+  display: flex;
+  a {
+    @include font-size(14,26,15);
+    color: #000;
+    padding: 30px 25px;
+    @include mediaMin($bp-nav) {
+      font-weight: $bold;
+    }
+  }
+  @include mediaMax($bp-nav) {
+    display: none;
+  }
+}
+.nav--button-mobile {
+  height: 60px;
+  display: block;
+  padding: 10px;
+  > div {
+    text-align: center;
+  }
+  p {
+    @include font-size(14,14,15);
+    color: #000;
+    margin-bottom: 0;
+  }
+  img {
+    height: 17.5px;
+    opacity: 0.2;
+  }
+  @include mediaMin($bp-nav) {
+    display: none;
+  }
+}
+
+
+.l-nav-mobile {
+  overflow-x: hidden;
+  display: block;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 995;
+  background-color: rgba(43, 43, 43, 1);
+  transition: bottom .75s ease-in, right .8s ease-in;
+  transition-delay: .5s;
+  max-width: 100%;
+  max-width: 100vw;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    padding: 15px 0;
+    position: relative;
+    right: 100%;
+    opacity: 0;
+    transition: right .6s ease-in, opacity .6s ease-in;
+    transition-delay: 0s;
+    z-index: 99998;
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+  a {
+    @include font-size(20, 28, 75);
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    @include mediaMax(420px) {
+      @include font-size(20, 28, 75);
+    }
+  }
+  @include mediaMin($bp-nav) {
+    display: none;
+  }
+  @include mediaMax(420px) {
+    position: absolute;
+  }
+}
+
+
+.l-nav--secondary {
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  > li > a {
+    @include font-size(30,30,75);
+    font-weight: 600;
+    @include mediaMax(420px) {
+      @include font-size(30,30,75);
+    }
+  }
+  .sub-menu {
+    padding-top: 10px;
+    li {
+      padding: 5px 0;
+      a {
+        color: $colour-accent;
+      }
+    }
+  }
+  .is-submenu-open .sub-menu {
+    display: block;
+    li {
+      max-height: 40px;
+      opacity: 1;
+      transition: max-height .4s ease-out, opacity .4s ease-out;
+      transition-delay: 0s, .1s;
+    }
+  }
+}
+
+/* Mobile Nav Padding */
+.l-nav--secondary {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .is-scrolled & {
+    padding-top: 95px;
+  }
+}
+
+.is-menu-expanded .l-nav-mobile {
+  right: 0;
+  bottom: 0;
+  //min-height: 200vw;
+  transition: bottom .75s ease-out, right .8s ease-out;
+  transition-delay: 0s;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  li {
+    right: 0;
+    opacity: 1;
+    transition: right .6s ease-out, opacity .3s ease-out;
+    transition-delay: .7s;
+  }
+}
+

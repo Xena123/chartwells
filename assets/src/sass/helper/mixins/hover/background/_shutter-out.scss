@@ -1,0 +1,45 @@
+//-----------------------------------
+//	Hover Mixins: Shutter In
+//-----------------------------------
+
+@mixin hvr-shutter-in($direction, $textColor, $bgStart, $bgEnd, $duration, $easing) {
+  @include hvr-setup;
+  transition-property: color;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+  color: $textColor;
+  background: $bgStart;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+    background: $bgEnd;
+    @if ($direction == "horizontal") {
+      transform: scaleX(0);
+    } @else if ($direction == "vertical") {
+      transform: scaleY(0);
+    }
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: white;
+
+		&:before {
+      @if ($direction == "horizontal") {
+        transform: scaleX(1);
+      } @else if ($direction == "vertical") {
+        transform: scaleY(1);
+      }
+    }
+	}
+}

@@ -1,0 +1,28 @@
+/*------------------------------------|
+|	Social                              |
+|------------------------------------*/
+
+
+.social {
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include mediaMin($bp-tablet-s) {
+      margin-right: 18px;
+    }
+  }
+  i {
+    color: #fff;
+    @include font-size(28);
+  }
+}
+
+.social--tblock {
+  i {
+    color: #fff;
+    @include font-size(45);
+  }
+}

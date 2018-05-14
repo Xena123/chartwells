@@ -1,0 +1,45 @@
+/*------------------------------------|
+|	Modal                               |
+|------------------------------------*/
+
+.modal-container {
+  height: 100%;
+}
+
+.modal__content {
+  padding: 30px;
+  h2 {
+    @include font-size(32, 33, -12.5);
+    margin-bottom: 30px;
+    @include mediaMin($bp-tablet-m) {
+      @include font-size(45, 45, -12.5);
+    }
+  }
+}
+
+.modal__theme-green {
+  background-color: #33aa66;
+  color: #fff;
+}
+
+.modal__theme-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.modal__img {
+  height: 65vh;
+  @include mediaMax($bp-tablet-l) {
+    display: none;
+  }
+}
+
+.modal__mob-img {
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+  }
+  @include mediaMin($bp-tablet-l) {
+    display: none;
+  }
+}

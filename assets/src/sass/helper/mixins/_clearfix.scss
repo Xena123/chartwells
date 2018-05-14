@@ -1,0 +1,18 @@
+//-----------------------------------
+//	Mixins
+//-----------------------------------
+
+
+//------ Clearfix ------//
+// Usage: @include clearfix;
+@mixin clearfix {
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: " ";
+  }
+}

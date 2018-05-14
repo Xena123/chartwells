@@ -1,0 +1,52 @@
+html.iziModal-isAttached,
+html.iziModal-isOverflow {
+  @include mediaMax($bp-tablet-l) {
+    overflow: visible !important;
+  }
+}
+
+
+.iziModal-navigate-next, .iziModal-navigate-prev {
+  opacity: 1 !important;
+  background-size: 40px !important;
+}
+
+.iziModal-navigate-next {
+  background: url('/assets/img/icons/arw-right.png') no-repeat 0 50%;
+}
+
+.iziModal-navigate-prev {
+  background: url('/assets/img/icons/arw-left.png') no-repeat 100% 50%;
+}
+
+.iziModal {
+  @include mediaMax($bp-tablet-l) {
+    margin-bottom: 20px !important;
+    margin-top: 10% !important;
+    height: 90% !important;
+    max-height: 700px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  @include mediaMin($bp-tablet-l) {
+    height: 65% !important;
+  }
+}
+
+.iziModal-wrap, .iziModal-content {
+  height: 100% !important;
+}
+
+.iziModal-navigate > button {
+  @include mediaMax($bp-tablet-l) {
+    top: -7%;
+  }
+}
+
+.iziModal-navigate-caption {
+  font-size: 0;
+  &:before,
+  &:after {
+    background: none;
+  }
+}

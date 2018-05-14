@@ -1,0 +1,48 @@
+.th--centered {
+  text-align: center;
+  margin: auto;
+}
+
+.th--main {
+  @include font-size(50, 70, -12.5);
+  @include mediaMin($bp-tablet-s) {
+    @include font-size(70, 90, -12.5);
+  }
+  @include mediaMin($bp-laptop-s) {
+    @include font-size(86, 145, -12.5);
+  }
+  @include mediaMax($bp-phone-l) {
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+}
+
+.th--primary {
+  @include font-size(50, 60, -12.5);
+  margin-bottom: 20px;
+  @include mediaMin($bp-tablet-l) {
+    @include font-size(65, 75, -12.5);
+  }
+}
+
+.th--secondary {
+  @include font-size(40, 40, -12.5);
+  margin-bottom: 15px;
+  @include mediaMin($bp-tablet-s) {
+    @include font-size(50, 50, -12.5);
+    margin-bottom: 30px;
+  }
+}
+
+.th--tertiary {
+  @include font-size(25, 23, -5);
+  margin-bottom: 15px;
+}
+
+.th--white {
+  color: #fff;
+}
+
+.th--testimonial {
+  font-weight: $bold;
+}

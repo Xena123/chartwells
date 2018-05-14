@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Chartwells</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,800" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <!-- Site Header -->
+    <nav class="l-nav-mobile" id="mobile-nav">
+      <ul class="l-nav--secondary">
+        <!-- TODO (Umbraco): Primary Nav. User can add link text -->
+        <li>
+          <a href="/food.html">Our Food</a>
+        </li>
+        <li>
+          <a href="/schools.html">Our Schools</a>
+        </li>
+        <li>
+          <a href="/housekeeping.html">Housekeeping</a>
+        </li>
+        
+        <li>
+          <a>Who we are</a>
+          <ul class="sub-menu">
+            <li><a href="/our-story.html">Our Story</a></li>
+            <li><a href="/meet-the-team.html">Meet The Team</a></li>
+            <li><a href="/team-development.html">Team Development</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/article.html">Outsourcing</a>
+        </li>
+      </ul> 
+    </nav>
+    <header class="l-header">
+      <div class="l-constrained--nav l-header__wrap">
+        <a href="#" id="js-brg" class="l-header__brg btn--brg" role="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <a href="/" class="l-header__logo btn">
+        </a>
+        <nav class="l-header__nav nav__container">
+          <!-- Navigation -->
+          <ul class="nav nav--header hvr--nav">
+            <!-- TODO (Umbraco): Primary Nav. User can add link text -->
+            <li>
+              <a href="/food.html">Our Food</a>
+            </li>
+            <li>
+              <a href="/schools.html">Our Schools</a>
+            </li>
+            <li>
+              <a href="/housekeeping.html">Housekeeping</a>
+            </li>
+            
+            <li>
+              <a>Who we are</a>
+              <ul class="sub-menu">
+                <li><a href="/our-story.html">Our Story</a></li>
+                <li><a href="/meet-the-team.html">Meet The Team</a></li>
+                <li><a href="/team-development.html">Team Development</a></li>
+                <li><a href="/careers.html">Careers</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/article.html">Outsourcing</a>
+            </li>
+          </ul> 
+        </nav>
+        <div class="nav__contact">
+          <div class="nav--button">
+            <a href="/contact.html" class="btn--caret">Contact Us</a>
+          </div>
+          <a href="/contact.html" class="nav--button-mobile">
+            <div><img src="/assets/img/icons/arw-btn.svg"></div>
+            <p>Contact</p>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- End of header -->
+    <main class="row--header-offset">
+      <div class="l-banner">
+        <div class="bg__cover" style="background-image: url('/assets/img/bg/bg_careers.jpg')">
+          <div class="row--fixed-offset row--btm-xoffset">
+            <section class="l-constrained">
+              <div class="fact fact__sml fact__search-pos">
+                <div class="fact__content fact__careers-content">
+                  <img src="/assets/img/icons/search.png">
+                  <p><strong><em>search jobs at Chartwells</em></strong></p>
+                </div>
+              </div>
+              <div class="tblock-left-no-pad row--btm-offset-sml">
+                <h1 class="th--primary">Careers</h1>
+                <p>In egestas condimentum mauris ac vulputate. Nam et tincidunt lorem. Sed viverra urna eu lectus vulputate, a pretium lectus porta. Integer fringilla, neque quis luctus auctor, lacus lectus sagittis mi, quis lobortis leo dui in nisl.</p>
+              </div>   
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="l-constrained row--minus">
+        <div class="row--search">
+          <div><input type="text" name="search" placeholder="Job Role"></div>
+          <div><select name="category" id="category">
+            <option value="0">All</option>
+            <option value="1">Admin / Clerical</option>
+            <option value="2">Chefs</option>
+            <option value="3">Cleaning</option>
+            <option value="4">Commercial / Supply Chain</option>
+            <option value="5">Custodial</option>
+            <option value="6">Customer service / Frontline</option>
+            <option value="7">Customer service / helpdesk</option>
+            <option value="8">Engineering</option>
+            <option value="9">Finance /payroll</option>
+            <option value="10">Front of house</option>
+            <option value="11">Grounds personnel</option>
+            <option value="12">Health &amp; safety</option>
+            <option value="13">Hospitality / Events</option>
+            <option value="14">Housekeeping / Stewards</option>
+            <option value="15">HR</option>
+            <option value="16">IT</option>
+            <option value="17">L&amp;D / Training</option>
+            <option value="18">Legal</option>
+            <option value="19">Maintenance</option>
+            <option value="20">Marketing &amp; Comms</option>
+            <option value="21">Operations (Facilities)</option>
+            <option value="22">Operations (Food)</option>
+            <option value="23">Other</option>
+            <option value="24">Portering</option>
+            <option value="25">Reception staff</option>
+            <option value="26">Scientific</option>
+            <option value="27">Sales / Business Development</option>
+            <option value="28">Security</option>
+            <option value="29">Vending personnel</option>
+            <option value="30">Project Management / LEAN</option>
+          </select></div>
+          <div><input type="text" name="location" placeholder="Location"></div>
+          <button type="submit" class="btn--search btn--caret">Search Jobs</button>
+        </div>
+        <section class="l-section--sidebar row--job-listing row--btm-offset-sml">
+          <aside class="l-aside">
+            <div class="job-type">
+              <h3>Employment Type</h3>
+              <select name="contract">
+                <option value="0">All</option>
+                <option value="1">Full Time</option>
+                <option value="3">Part Time</option>
+                <option value="4">Temporary / Casual</option>
+                <option value="5">Fixed Term</option>
+              </select>
+            </div>
+          </aside>
+          <div class="l-section--aside">
+            <div class="job-listing">
+              <header>
+                <p class="job-role"><strong>Assistant Chef</strong></p>
+                <p class="job-loc"><strong>Central London, Full time</strong></p>
+              </header>
+              <div class="">
+                <p>Sed viverra urna eu lectus vulputate, a pretium lectus porta. Integer fringilla, neque quis luctus auctor, lacus lectus sagittis mi, quis lobortis leo dui in nisl. Sed viverra urna eu lectus vulputate, a pretium lectus porta. Integer fringilla, neque quis luctus auctor, lacus lectus sagittis mi, quis lobortis leo dui in nisl. Sed viverra urna eu lectus vulputate, a pretium lectus porta. Integer fringilla, neque quis luctus auctor, lacus lectus sagittis mi, quis lobortis leo dui in nisl.</p>
+                <p>Urna eu lectus vulputate, a pretium lectus porta. Integer fringilla, neque quis luctus auctor, lacus lectus sagittis mi, quis lobortis leo dui in nisl.</p>
+              </div>
+              <button class="btn btn--search">Details & Apply</button>
+            </div>
+            <div class="job-pagination">
+              <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="l-footer--carousel">
+      <div class="l-constrained l-footer--middle">
+            
+        <p>© 2018 Chartwells Independent</p>
+        <ul class="social l-footer__social">
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+        </ul>
+        
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.min.js"></script>
+  </body>
+</html>

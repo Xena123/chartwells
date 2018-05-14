@@ -1,0 +1,44 @@
+//-----------------------------------
+//	Hover Mixins: Bounce
+//-----------------------------------
+
+@mixin hvr-bounce($direction, $textColor, $bgColor, $duration, $easing) {
+  @include hvr-setup;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+  transition-property: color;
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+    background: $bgColor;
+    transform: scaleY(0);
+    @if ($direction == "down") {
+      transform-origin: 50% 0;
+    } @else if ($direction == "up") {
+      transform-origin: 50% 100%;
+    } @else if ($direction == "right") {
+      transform-origin: 0% 50%;
+    } @else if ($direction == "left") {
+      transform-origin: 100% 50%;
+    }
+    transition-property: transform;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+    color: $textColor;
+
+		&:before {
+      transform: scaleY(1);
+			transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
+		}
+	}
+}

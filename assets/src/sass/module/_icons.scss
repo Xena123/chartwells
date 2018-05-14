@@ -1,0 +1,34 @@
+/*------------------------------------|
+|	Icons                               |
+|------------------------------------*/
+
+// Config Module
+$icn-bgcolor: $colour-body;
+$icn-fontcolor: $colour-text-body;
+
+// Module Styling
+.icon--main {
+  width: 135px;
+  @include mediaMin($bp-tablet-m) {
+    width: auto;
+  }
+}
+
+
+.icon--testimonial img {
+  max-width: 140px;
+}
+
+.icon--twitter {
+  height: 50px;
+  margin-left: 10px;
+  @include mediaMin($bp-tablet-m) {
+    height: 75px;
+    margin-left: 10px;
+  }
+}
+
+.icon--disc-lg {
+  width: 125px;
+  margin-bottom: 15px;
+}

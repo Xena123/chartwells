@@ -1,0 +1,95 @@
+/*------------------------------------|
+|	Animation                           |
+|------------------------------------*/
+
+// @keyframes from-to {
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes 0-50 {
+//   0% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+// }
+
+/* Block nimations */
+
+$mobile-animation: 50px;
+
+.animate {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: opacity 0.5s, ease transform 0.5s;
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+.animate-featured {
+  opacity: 0;
+  transform: translateX(90px);
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0.5s;
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(90px);
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+
+  @include mediaMin($bp-tablet-xl) {
+    transform: translateX(0) translateY($mobile-animation);
+  }
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(-90px);
+  transition: opacity 0.5s, ease transform 0.5s;
+
+  @include mediaMin($bp-tablet-xl) {
+    transform: translateX(0) translateY($mobile-animation);
+  }
+
+  &.visible {
+    transform: translateX(0);
+    opacity: 1;
+
+    @include mediaMin($bp-tablet-xl) {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}
+
+.animate-opacity {
+  opacity: 0;
+  transition: ease opacity 0.6s;
+
+  &.visible {
+    opacity: 1
+  }
+}

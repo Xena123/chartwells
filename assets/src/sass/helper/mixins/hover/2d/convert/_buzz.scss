@@ -1,0 +1,23 @@
+/* Buzz */
+@include keyframes(hvr-buzz) {
+	50% {
+		@include prefixed(transform, translateX(3px) rotate(2deg));
+	}
+
+	100% {
+		@include prefixed(transform, translateX(-3px) rotate(-2deg));
+	}
+}
+
+@mixin buzz {
+	@include hvr-setup;
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include prefixed(animation-name, hvr-buzz);
+		@include prefixed(animation-duration, .15s);
+		@include prefixed(animation-timing-function, linear);
+		@include prefixed(animation-iteration-count, infinite);
+	}
+}

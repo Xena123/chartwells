@@ -1,0 +1,141 @@
+// Fact discs
+
+.fact {
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  z-index: 10;
+}
+
+.fact__blue {
+  background-color: #9acfe1;
+}
+
+// Disc sizes
+
+.fact__lg {
+  height: 285px;
+  width: 285px;
+  @include mediaMax($bp-tablet-l) {
+    display: none;
+  }
+}
+
+.fact__md {
+  height: 250px;
+  width: 250px;
+  @include mediaMax($bp-tablet-xl) {
+    display: none;
+  }
+}
+
+.fact__sml {
+  height: 210px;
+  width: 210px;
+  @include mediaMax($bp-tablet-xl) {
+    display: none;
+  } 
+}
+
+// Disc positions
+
+.fact__lg-pos {
+  right: 100px;
+  top: 150px;
+}
+
+.fact__sml-pos {
+  right: 55px;
+  top: -150px;
+}
+
+.fact__food-pos {
+  bottom: 75px;
+  right: 100px;
+}
+
+.fact__contact-pos {
+  top: 95px;
+  @include mediaMin($bp-tablet-xl) {
+    right: 2%;
+  }
+  @include mediaMin($bp-laptop-s) {
+    right: 150px;
+  }
+}
+
+.fact__careers-pos {
+  right: 200px;
+  top: 30px;
+}
+
+.fact__search-pos {
+  right: 200px;
+  top: 110px;
+}
+
+.fact__team-pos {
+  top: 100px;
+  right: 100px;
+  z-index: 0;
+  @include mediaMin($bp-laptop-s) {
+    
+  }
+  @include mediaMax($bp-tablet-xl) {
+    display:none;
+  }
+}
+
+
+
+// Disc content
+
+.fact__content {
+  transform: rotate(10deg);
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  img,ul {
+    margin-bottom: 10px;
+  }
+}
+
+// Disc content positions
+
+.fact__lg-content {
+  top: 70px;
+  left: 35px;
+  max-width: 75%;
+}
+
+.fact__md-content {
+  top: 60px;
+  right: 25px;
+  max-width: 80%;
+}
+
+.fact__sml-content {
+  top: 60px;
+  right: 50px;
+}
+
+.fact__contact-content {
+  top: 45px;
+  right: 20px;
+  max-width: 80%;
+}
+
+.fact__careers-content {
+  top: 40px;
+  right: 25px;
+  max-width: 80%;
+  font-family: Georgia;
+  p {
+    @include font-size(18,23,-5);
+  }
+}
+
+
+
+

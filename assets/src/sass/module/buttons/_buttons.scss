@@ -1,0 +1,62 @@
+/*------------------------------------|
+|	Buttons                             |
+|------------------------------------*/
+
+
+// Module Styling
+.btn {
+  pointer: cursor;
+  padding: 15px;
+}
+
+.btn--caret {
+  display: flex;
+  &:after {
+    content: '\f0a9';
+    font-family: FontAwesome;
+    position: relative;
+    right: -7px;
+    opacity: 0.2;
+    font-size: 20px;
+  }
+}
+
+.btn--overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+
+.btn--submit {
+  border: 1px solid #000;
+  border-radius: 5px;
+  @include font-size(16,20,12.5);
+  input {
+    background-color: transparent;
+    font-weight: $bold;
+    font-family: $font-alpha;
+    padding: 0;
+  }
+}
+
+
+.btn--search {
+  border: none;
+  border-radius: 5px;
+  background-color: $colour-accent;
+  font-weight: $bold;
+  font-family: $font-alpha;
+  justify-content: center;
+  @include font-size(16,20,12.5);
+}
+
+
+
+// Module States
+.btn.is-active {
+
+}

@@ -1,0 +1,14 @@
+/*------------------------------------|
+|	Banners                             |
+|------------------------------------*/
+.l-banner {
+  height: 58vh;
+}
+
+.l-banner__lg {
+  position: relative;
+  height: 500px;
+  @include mediaMin($bp-tablet-m) {
+    height: 800px;
+  }
+}

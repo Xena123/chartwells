@@ -1,0 +1,24 @@
+/*------------------------------------|
+|	Type - Titles                       |
+|------------------------------------*/
+
+.th-block {
+  font-family: $font-alpha;
+  text-transform: uppercase;
+}
+
+.th-block-a {
+  @extend .th-block;
+  @include font-size(28, 31, 12.5);
+  @include mediaMin($bp-tablet-m) {
+    @include font-size(45, 50, 12.5);
+  }
+}
+
+.th-block-b {
+  @extend .th-block;
+  @include font-size(21, 31, 12.5);
+  @include mediaMin($bp-tablet-m) {
+    @include font-size(35, 50, 12.5);
+  }
+}

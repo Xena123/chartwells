@@ -1,0 +1,50 @@
+// Hover effect on the modal boxes
+
+.hvr--modal {
+  @include cover();
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .6s ease-in;
+  background-color: rgba($colour-accent, 0.8);
+  .hvr--text {
+    @include center-element();
+    text-align: center;
+    color: #000;
+    @include font-size(22, 22, -5);
+  }
+}
+
+.hvr--container:hover .hvr--modal {
+  opacity: 1;
+}
+
+
+// Hover effect on the meet the team boxes 
+.hvr--team {
+  @include cover();
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .6s ease-in;
+  background-color: #fff;
+  .hvr--text {
+    padding: 0 20px;
+    @include center-vertical();
+    text-align: center;
+    color: #000;
+    @include font-size(22, 22, -5);
+  }
+}
+
+.hvr--container:hover .hvr--team {
+  opacity: 1;
+}
+
+
+.hvr--nav {
+  .active {
+    color: $colour-accent;
+  }
+  a:hover {
+    color: $colour-accent;
+  }
+}

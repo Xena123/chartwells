@@ -1,0 +1,52 @@
+
+.bg__full {
+  background-size: cover;
+  height: 100%;
+  min-height: 600px;
+  width: 100%;
+  background-position: center center;
+  @include mediaMin($bp-tablet-l) {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  @include mediaMax($bp-tablet-l) {
+    min-height: 600px;
+    padding-bottom: 10px;
+  }
+}
+
+.bg__img {
+  @include cover();
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg__cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.bg__accent {
+  background-color: $colour-accent;
+}
+
+.bg__drkaccent {
+  background-color: #f1d133;
+}
+
+.bg__layer {
+  position: absolute;
+  @include cover();
+  &.white {
+    background-color: rgba(255,255,255,0.7);
+  }
+  &.black {
+    background-color: rgba(0,0,0,0.5);
+  }
+  @include mediaMin($bp-tablet-l) {
+    display: none;
+  }
+}

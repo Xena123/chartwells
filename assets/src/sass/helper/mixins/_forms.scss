@@ -1,0 +1,42 @@
+//-----------------------------------
+//	Form Mixins
+//-----------------------------------
+
+// Add custom Arrow to select
+@mixin selectArrow($color, $bg, $size, $fromLeft) {
+  $leftEl: $fromLeft - $size;
+  background:
+    linear-gradient(45deg, transparent 50%, $color 50%),
+    linear-gradient(135deg, $color 50%, transparent 50%),
+    linear-gradient(to right, $bg, $bg);
+  background-position:
+    right $fromLeft center,
+    right $leftEl center,
+    100% center;
+  background-size:
+    $size $size,
+    $size $size,
+    $size $size;
+  background-repeat: no-repeat;
+}
+
+@mixin resetField() {
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+// Search icon. Requires font awesome
+@mixin searchIcon() {
+  position: relative;
+  &:after {
+    content: '\f002';
+    color: #00505a;
+    font-family: "FontAwesome";
+    font-weight: $medium;
+    position: absolute;
+    left: 5px;
+    top: 14px;
+    width: 22px;
+  }
+}

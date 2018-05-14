@@ -1,0 +1,52 @@
+//-----------------------------------
+//	Hover Mixins: Sweep
+//-----------------------------------
+
+@mixin hvr-sweep($direction, $textColor, $bgColor, $duration, $easing) {
+  @include hvr-setup;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+  transition-property: color;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $bgColor;
+    @if ($direction == "down") {
+      transform-origin: 100% 0;
+      transform: scaleY(0);
+    } @else if ($direction == "up") {
+      transform-origin: 0% 100%;
+      transform: scaleY(0);
+    } @else if ($direction == "right") {
+      transform-origin: 0% 50%;
+      transform: scaleX(0);
+    } @else if ($direction == "left") {
+      transform-origin: 100% 50%;
+      transform: scaleX(0);
+    }
+    transition-property: transform;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $textColor;
+    &:before {
+      @if ($direction == "down") {
+        transform: scaleY(1);
+      } @else if ($direction == "up") {
+        transform: scaleY(1);
+      } @else if ($direction == "right") {
+        transform: scaleX(1);
+      } @else if ($direction == "left") {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

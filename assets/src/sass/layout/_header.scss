@@ -1,0 +1,58 @@
+/*------------------------------------|
+|	Site Header                         |
+|------------------------------------*/
+
+.l-header {
+  background-color: $colour-header;
+  color: $colour-text-header;
+  height: 88px;
+  padding: 10px 0;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 995;
+  a {
+    color: $colour-text-header;
+  }
+  @include mediaMax($bp-nav) {
+    height: 60px;
+  }
+}
+
+.l-header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.l-header__logo {
+  display: inline-block;
+  width: 75px;
+  height: 45px;
+  background: transparent url('../img/logos/logo.png') no-repeat center center;
+  background-size: contain;
+  color: #fff;
+  left: 5%;
+  @include mediaMax($bp-nav) {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+  @include mediaMin($bp-nav) {
+    position: absolute;
+    height: 65px;
+    width: 110px;
+  }
+}
+
+.l-header__brg {
+  display: none;
+  @include mediaMax($bp-nav) {
+    position: absolute;
+    left: 0;
+    display: block;
+  }
+}
+

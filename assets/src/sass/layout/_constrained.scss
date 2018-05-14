@@ -1,0 +1,69 @@
+/*------------------------------------|
+|	Content Wrap                        |
+|------------------------------------*/
+
+/*---- Limits width of content, adds side padding, & allows background colours to extend to screen edge ----*/
+
+.l-constrained {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include mediaMin($bp-tablet-l) {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-right: calc(5% + 15px);
+    padding-left: calc(5% + 15px);
+  }
+  @include mediaMin($bp-laptop-s) {
+    padding-right: 8%;
+    padding-left: 8%;
+    padding-right: calc(8% + 15px);
+    padding-left: calc(8% + 15px);
+  }
+}
+
+.l-constrained--grid {
+  padding-right: 2.5%;
+  padding-left: 2.5%;
+}
+
+.l-constrained--nav {
+  position: relative;
+  @include mediaMin($bp-nav) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.l-constrained--sml {
+  position: relative;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.l-constrained--extra {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include mediaMin($bp-tablet-s) {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-right: calc(5% + 15px);
+    padding-left: calc(5% + 15px);
+  }
+  @include mediaMin($bp-laptop-s) {
+    padding-right: 14%;
+    padding-left: 14%;
+    padding-right: calc(14% + 15px);
+    padding-left: calc(14% + 15px);
+  }
+}
+
+
+.l-constrained--ctr {
+  text-align: center;
+}
+
+.l-constrained--push-foot {
+  height: calc(100vh - 305px);
+}

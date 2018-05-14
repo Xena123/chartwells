@@ -1,0 +1,50 @@
+.tblock-left {
+  max-width: 90%;
+  @include mediaMin($bp-tablet-m) {
+    max-width: 635px;
+    text-align: left;
+    padding-left: 8%;
+    @include font-size(16, 26, 0);
+  }
+  @include mediaMax($bp-tablet-m) {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.tblock-centered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.tblock-ctr-ctr {
+  @include center-element();
+  text-align: center;
+}
+
+.tblock-top-ctr {
+  margin: auto;
+  text-align: center;
+  @include mediaMax($bp-phone-l) {
+    max-width: 90%;
+  }
+}
+
+.tblock-left-no-pad {
+  max-width: 635px;
+  margin-left: 15px;
+  @include font-size(16, 26, 0);
+  @include mediaMax($bp-phone-l) {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}
+
+.tblock-white {
+  color: #fff;
+}
+

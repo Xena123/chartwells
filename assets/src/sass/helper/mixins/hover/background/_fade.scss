@@ -1,0 +1,17 @@
+//-----------------------------------
+//	Hover Mixins: Fade
+//-----------------------------------
+
+@mixin hvr-fade($textColor, $bgColor, $duration, $easing) {
+  @include hvr-setup;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+  transition-property: color, background-color;
+  overflow: hidden;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $bgColor;
+    color: $textColor;
+  }
+}

@@ -1,0 +1,12 @@
+/* Backward */
+@mixin backward {
+	@include hvr-setup;
+	@include prefixed(transition-duration, $mediumDuration);
+	@include prefixed(transition-property, transform);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include prefixed(transform, translateX(-8px));
+	}
+}

@@ -1,0 +1,95 @@
+//------------------------------------
+//	Variables
+//------------------------------------
+
+// Font Sizes
+$base-font-size: 16 !default;
+
+//Font Weights: Adjust to actual font sizes being used. 0 = Normal text, + = steps heavier, - = steps lighter
+$bold: 700;
+$medium: 500;
+$regular: 400;
+$light: 300;
+$xlight: 100;
+
+// Font Faces
+$font-alpha: 'Open Sans', sans-serif;
+$font-beta: 'SD Georgia Light', serif;
+
+// Box Model
+$box-model: border-box;
+
+// Colours
+$colour-body: #fff;
+$colour-header: #111;
+$colour-footer-top: #003339;
+$colour-footer-mid: #1d1d1d;
+$colour-footer-btm: #111;
+$colour-text-body: #111;
+$colour-text-header: #fff;
+$colour-text-footer: #fff;
+
+$colour-accent: #ffdd35;
+
+// Z-Indexes: List in order from furthest towards the front to furthest towards the back
+  // See function z() in functions.scss for usage
+  // Usage: z-index: z('nav');
+
+$z-indexes: (
+  "modal",
+  "l-header__brg",
+  "nav",
+  "l-header",
+  "block__content",
+  "hvr",
+);
+
+// Breakpoints
+  // See media-query-mixins.php for usage
+  //Max Screen Width
+  $max_width: 1600px;
+
+  $bp-nav: 960px;           // pure-u-nav-
+  $bp-max: $max_width;
+  $bp-phone: 568px;         // pure-u-p-
+  $bp-phone-l: 600px;       // pure-u-pl-
+  $bp-tablet-s: 768px;      // pure-u-ts-
+  $bp-tablet-m: 840px;      // pure-u-tm-
+  $bp-tablet: 980px;        // pure-u-t-
+  $bp-tablet-l: 1024px;     // pure-u-tl-
+  $bp-tablet-xl: 1124px;    // pure-u-txl-
+  $bp-laptop-s: 1280px;     // pure-u-ls-
+  $bp-laptop: 1380px;
+  $bp-laptop-l: 1680px;
+  $bp-desktop: 2000px;
+
+
+// Column Breakpoints
+  // See grid-mixins.php for usage
+//Quarter
+// Go to 2 columns wide at this point
+$break-col-quarter-2: 480px;
+// Go to 4 columns wide at this point
+$break-col-quarter-4: 960px;
+// Half
+// Go to 2 columns wide at this point
+$break-col-half-2: $break-col-quarter-4;
+// Third
+// Go to 2 columns wide at this point
+$break-col-third-2: $break-col-quarter-2;
+// Go to 3 columns wide at this point
+$break-col-third-3: $break-col-half-2;
+// Sixth
+// Go to 2 columns wide at this point
+$break-col-sixth-2: 480px;
+// Go to 3 columns wide at this point
+$break-col-sixth-3: $break-col-quarter-2;
+// Go to 6 columns wide at this point
+$break-col-sixth-6: $break-col-third-3;
+// Fifth
+// Go to 2 columns wide at this point
+$break-col-fifth-2: $break-col-sixth-2;
+// Go to 3 columns wide at this point
+$break-col-fifth-3: $break-col-sixth-3;
+// Go to 4 columns wide at this point
+$break-col-fifth-5: $break-col-third-3;

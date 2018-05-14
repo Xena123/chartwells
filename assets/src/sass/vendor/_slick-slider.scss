@@ -1,0 +1,74 @@
+/* Slider */
+
+.slick-next, .slick-prev {
+  position: absolute;
+  transform: translateY(-60%);
+  width: 40px;
+  height: 80px;
+  font-size: 0;
+  border: none;
+  margin: auto;
+  padding: 0;
+  z-index: 10;
+  top: 30%;
+  @include mediaMin($bp-tablet-m) {
+    top: 50%;
+  }
+}
+
+.slick-prev {
+  left: 0;
+  background: url('../../assets/img/icons/arw-left-mob.png') no-repeat;
+  @include mediaMin($bp-tablet-m) {
+    left: -40px;
+    background: url('../../assets/img/icons/arw-left.png') no-repeat;
+  }
+}
+
+.slick-next {
+  right: 0;
+  background: url('../../assets/img/icons/arw-right-mob.png') no-repeat;
+  @include mediaMin($bp-tablet-m) {
+    right: -40px;
+    background: url('../../assets/img/icons/arw-right.png') no-repeat;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  list-style-type: none;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    button {
+      width: 15px;
+      height: 15px;
+      border: none;
+      text-align: center;
+      background-color: #969692;
+      border-radius: 50%;
+      font-size: 0;
+    }
+  }
+  .slick-active {
+    button {
+      background-color: #d5d5d4;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @include mediaMin($bp-phone-l) {
+    left: 105px;
+    bottom: 80px;
+  }
+  @include mediaMin($bp-tablet-m) {
+    bottom: 100px;
+  }
+  @include mediaMin($bp-tablet-l) {
+    bottom: 60px;
+  }
+}

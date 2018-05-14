@@ -1,0 +1,61 @@
+/*------------------------------------|
+|	Mobile Nav                          |
+|------------------------------------*/
+
+.l-nav--mobile {
+  visibility: hidden;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vw;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  background: #100a2e;
+  transition: .9s ease-out;
+  transition-delay: .4s;
+  z-index: z('l-nav--mobile');
+  .fade-img {
+    opacity: 0;
+    transition: opacity .6s ease-out;
+    transition-delay: 0s;
+  }
+  .l-header__logo {
+    padding: 14px 0 30px;
+  }
+}
+
+.is-menu-open .l-nav--mobile {
+  visibility: visible;
+  left: 0;
+  transition: .9s ease-in;
+  transition-delay: 0s;
+  .fade-img {
+    opacity: 1;
+    transition: opacity .9s ease-in;
+    transition-delay: .6s;
+  }
+  @include mediaMin($bp-nav) {
+    display: none;
+  }
+}
+
+.l-nav--mobile-lst {
+  position: relative;
+  padding: 30px 45px;
+  text-align: left;
+  left: 100%;
+  opacity: 0;
+  transition: opacity .9s ease-in-out, left .6s ease-in-out;
+  transition-delay: 0s;
+  li {
+    margin-bottom: 36px;
+  }
+}
+
+.is-menu-open .l-nav--mobile-lst {
+  left: 0;
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out, left .6s ease-in-out;
+  transition-delay: .6s;
+}

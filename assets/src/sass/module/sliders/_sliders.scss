@@ -1,0 +1,72 @@
+/*------------------------------------|
+| Sliders                             |
+|------------------------------------*/
+
+.homeSlideInit {
+  @include mediaMax($bp-tablet-l) {
+    padding: 50px 0;
+  }
+}
+
+.slide {
+  position: relative;
+  height: 65vh;
+  text-align: center;
+  @include mediaMin($bp-tablet-m) {
+    height: 65vh;
+  }
+}
+
+.slide__bg-mob {
+  @include mediaMax($bp-tablet-m) {
+    height: 40vh;
+  }
+}
+
+.slide--text {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  text-align: left;
+  padding: 20px 20px 60px;
+  max-width: 50%;
+  bottom: 35px;
+  left: 35px;
+  @include mediaMax($bp-tablet-m) {
+    display: none;
+  }
+  @include mediaMin($bp-tablet-xl) {
+    max-width: 40%;
+  }
+    
+}
+
+.slide--content {
+  color: #fff;
+  h3 {
+    @include font-size(36,85,-12.5);
+    margin-bottom: 0;
+    @include mediaMin($bp-phone-l) {
+      @include font-size(36,85,-12.5);
+    }
+  }
+  p {
+    @include font-size(16,25,0);
+  }
+}
+
+.slide--cta {
+  color: $colour-accent;
+  font-weight: $bold;
+}
+
+.slide--mobile {
+  display: none;
+  @include mediaMax($bp-tablet-m) {
+    display: block;
+    background-color: #000;
+    padding: 0 15px 20px;
+    position: absolute;
+    top: 55%;
+    height: 100%;
+  }
+}

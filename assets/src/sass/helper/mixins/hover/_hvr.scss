@@ -1,0 +1,10 @@
+//-----------------------------------
+//	Hover Mixins:
+//-----------------------------------
+
+@mixin hvr- ($textColor, $bgColor, $duration, $easing) {
+  @include hvr-setup;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+
+}
